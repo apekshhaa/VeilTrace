@@ -1,0 +1,4 @@
+# This scanners package requires the system `nmap` executable to be installed.
+# The Nmap module uses `pydantic` for its models.
+pydantic>=1.10
+

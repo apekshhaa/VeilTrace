@@ -8,7 +8,8 @@ from pydantic import BaseModel, Field
 class Evidence(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid4()))
 
-    investigation_id: str
+    
+    investigation_id: str | None = None
 
     type: str
     value: str

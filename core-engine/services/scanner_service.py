@@ -14,11 +14,11 @@ class ScannerService:
             )
 
         result = run_scan(module, target)
-
+        current = self.investigation_manager.investigation_service.get()
         for finding in result["findings"]:
-
             evidence = Evidence(**finding)
-
+            if current:
+                evidence.investigation_id = current.id
             self.investigation_manager.receive_evidence(evidence)
 
         return result
