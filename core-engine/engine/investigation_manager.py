@@ -1,7 +1,5 @@
 from services.investigation_service import InvestigationService
 from services.evidence_service import EvidenceService
-
-
 class InvestigationManager:
 
     def __init__(self):

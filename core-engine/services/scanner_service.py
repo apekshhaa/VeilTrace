@@ -1,12 +1,6 @@
 from engine.investigation_manager import InvestigationManager
 from models.evidence import Evidence
-
-try:
-    from scanners.runner import run_scan
-except ImportError:
-    run_scan = None
-
-
+from scanners.runner import run_scan
 class ScannerService:
 
     def __init__(self):
